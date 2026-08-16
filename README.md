@@ -1,0 +1,131 @@
+# 🚀 SkillBridge AI
+
+[![Next.js](https://img.shields.io/badge/Next.js-15.3.3-black?style=for-the-badge&logo=next.js)](https://nextjs.org/)
+[![React](https://img.shields.io/badge/React-18.3-61DAFB?style=for-the-badge&logo=react)](https://reactjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.0-3178C6?style=for-the-badge&logo=typescript)](https://www.typescriptlang.org/)
+[![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-3.4-38B2AC?style=for-the-badge&logo=tailwind-css)](https://tailwindcss.com/)
+[![Google Gemini](https://img.shields.io/badge/Google_Gemini-2.5_Flash-8E44AD?style=for-the-badge&logo=google)](https://ai.google.dev/)
+[![Firebase](https://img.shields.io/badge/Firebase-11.9-FFCA28?style=for-the-badge&logo=firebase)](https://firebase.google.com/)
+[![MongoDB](https://img.shields.io/badge/MongoDB-Mongoose-47A248?style=for-the-badge&logo=mongodb)](https://www.mongodb.com/)
+
+> **Bridge the Gap Between College Education and Career Readiness with AI.**
+
+SkillBridge AI is a next-generation, AI-driven career guidance and skill accelerator platform. It helps students and job seekers evaluate their current skills against market demands, build 12-week personalized learning roadmaps, pass ATS resume filters, and connect with tech industry mentors.
+
+---
+
+## 🌟 Key Features
+
+* 🤖 **AI Career Coach**: Interactive 24/7 AI mentor powered by **Google Gemini 2.5 Flash** & **Genkit** for real-time career guidance and interview prep.
+* 📚 **12-Week Learning Path Generator**: Builds customized, week-by-week roadmaps tailored to user goals with milestones and project ideas.
+* 📄 **ResumeRadar (ATS Resume Analyzer)**: Scores PDF/TXT resumes against targeted job descriptions, calculates Keyword Match & ATS Compatibility %, and suggests AI-improved bullet points.
+* 🎯 **Skill Gap Analysis**: Identifies missing technical competencies required for target career roles (*Frontend Developer*, *Data Scientist*, *Cloud Architect*, etc.).
+* 👥 **Mentor Connect Network**: Access a searchable network of 20,000+ industry mentors across top tech companies (Google, Microsoft, Amazon, Meta, Netflix).
+* 📊 **Trending Skills & Insights**: Real-time market data tracking high-demand skills in tech.
+
+---
+
+## 🛠️ Technology Stack
+
+| Domain | Technologies |
+|---|---|
+| **Framework** | Next.js 15.3 (App Router & Turbopack), React 18, TypeScript |
+| **Styling & UI** | Tailwind CSS 3.4, Radix UI Primitives, Framer Motion, Lucide Icons, Recharts |
+| **AI Integration** | Google Genkit 1.20, Gemini 2.5 Flash, Omnidim AI Integration |
+| **Databases** | Firebase (Firestore, Cloud Storage), MongoDB & Mongoose |
+| **Authentication** | Firebase Auth (Email/Password & Google OAuth) |
+
+---
+
+## 📂 Project Structure
+
+```
+SkillBridgeAi/
+├── src/
+│   ├── ai/                    # Genkit AI flows & Omnidim AI helpers
+│   ├── app/                   # Next.js 15 App Router pages & API routes
+│   │   ├── api/               # Serverless AI & database API endpoints
+│   │   ├── auth/              # User Authentication (Login/Sign Up)
+│   │   ├── chat/              # AI Career Coach chat interface
+│   │   ├── dashboard/         # User dashboard overview
+│   │   ├── learning-paths/    # 12-Week Roadmap generator
+│   │   ├── mentors/           # Mentor network & connections
+│   │   ├── resume-radar/      # AI Resume Analyzer
+│   │   ├── settings/          # User preferences
+│   │   └── skills/            # Skill gap & market trend analyzer
+│   ├── components/
+│   │   ├── dashboard/         # Dashboard Sidebar, TopBar & Layout components
+│   │   ├── layout/            # Site AppShell, Header & Footer components
+│   │   ├── sections/          # Landing page sections (Hero, Features, Testimonials)
+│   │   └── ui/                # Radix UI design system elements
+│   ├── firebase/              # Firebase configuration, hooks, & providers
+│   └── lib/                   # MongoDB connection module & utilities
+├── public/                    # Static assets & icons
+└── README.md
+```
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+Make sure you have Node.js (v18 or higher) and npm installed:
+```bash
+node -v
+npm -v
+```
+
+### Installation
+
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/Harshwardhan-singh-rao/SkillBridgeAi.git
+   cd SkillBridgeAi
+   ```
+
+2. **Install dependencies**:
+   ```bash
+   npm install
+   ```
+
+3. **Configure Environment Variables**:
+   Create a `.env.local` file in the root directory:
+   ```env
+   # Google AI API Key for Gemini & Genkit
+   GOOGLE_API_KEY=your_google_api_key_here
+
+   # MongoDB Connection String
+   MONGODB_URI=mongodb://127.0.0.1:27017/skillbridge
+
+   # Environment
+   NODE_ENV=development
+   ```
+
+4. **Run the Development Server**:
+   ```bash
+   npm run dev
+   ```
+
+5. **Open Application**:
+   Navigate to [http://localhost:9002](http://localhost:9002) in your browser.
+
+---
+
+## 🔌 API Endpoints Reference
+
+| Endpoint | Method | Description |
+|---|---|---|
+| `/api/ai/chat` | `POST` | Interacts with the AI Career Coach |
+| `/api/ai/learning-path` | `POST` | Generates a 12-week customized learning roadmap |
+| `/api/analyze-resume` | `POST` | Analyzes resume text against job description |
+| `/api/db-health` | `GET` | MongoDB database connection health check |
+
+---
+
+## 📜 License
+
+This project is open-source and available under the [MIT License](LICENSE).
+
+---
+
+Made with 💜 by **Team SkillBridge** | Powered by AI

@@ -1,0 +1,131 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 200 100% 95%;
+    --foreground: 224 71% 4%;
+    --card: 200 100% 98%;
+    --card-foreground: 224 71% 4%;
+    --popover: 200 100% 98%;
+    --popover-foreground: 224 71% 4%;
+    --primary: 197 71% 53%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 200 60% 90%;
+    --secondary-foreground: 224 71% 4%;
+    --muted: 200 60% 90%;
+    --muted-foreground: 224 71% 15%;
+    --accent: 291 64% 42%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 200 50% 88%;
+    --input: 200 50% 88%;
+    --ring: 197 71% 53%;
+    --radius: 0.5rem;
+    --chart-1: 197 71% 53%;
+    --chart-2: 291 64% 42%;
+    --chart-3: 221 83% 53%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+  }
+
+  .dark {
+    --background: 222 47% 11%;
+    --foreground: 210 40% 98%;
+    --card: 222 47% 13%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222 47% 11%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 197 71% 53%;
+    --primary-foreground: 222 47% 11%;
+    --secondary: 217 33% 17%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217 33% 17%;
+    --muted-foreground: 215 20% 65%;
+    --accent: 197 80% 60%;
+    --accent-foreground: 222 47% 11%;
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217 33% 20%;
+    --input: 217 33% 20%;
+    --ring: 197 71% 53%;
+    --chart-1: 197 71% 53%;
+    --chart-2: 291 64% 42%;
+    --chart-3: 221 83% 53%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    scroll-behavior: smooth;
+  }
+  section {
+    @apply w-full py-12 md:py-24 lg:py-32;
+  }
+}
+
+.animated-gradient {
+  animation: gradient 15s ease infinite;
+  background-size: 400% 400%;
+  background-image: linear-gradient(
+    -45deg,
+    hsl(var(--primary) / 0.3),
+    hsl(var(--accent) / 0.3),
+    hsl(221 83% 53% / 0.3),
+    hsl(var(--primary) / 0.3)
+  );
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.glass-card {
+  @apply bg-card/60 backdrop-blur-lg border border-border/20;
+}
+
+.glow-sm {
+  @apply shadow-[0_0_10px] shadow-primary/50;
+}
+.glow {
+  @apply shadow-[0_0_20px] shadow-primary/50;
+}
+.glow-lg {
+  @apply shadow-[0_0_30px] shadow-primary/50;
+}
+.glow-xl {
+  @apply shadow-[0_0_40px] shadow-primary/50;
+}
+
+.dark .glow-sm {
+  @apply shadow-[0_0_15px] shadow-accent/20;
+}
+.dark .glow {
+  @apply shadow-[0_0_30px] shadow-accent/20;
+}
+.dark .glow-lg {
+  @apply shadow-[0_0_45px] shadow-accent/20;
+}
+.dark .glow-xl {
+  @apply shadow-[0_0_60px] shadow-accent/20;
+}
+
+.animate-in {
+  animation-duration: 0.5s;
+}
