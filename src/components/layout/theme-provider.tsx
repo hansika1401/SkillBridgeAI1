@@ -27,6 +27,7 @@ export function ThemeProvider({
   defaultTheme?: Theme;
   storageKey?: string;
   enableSystem?: boolean;
+  attribute?: string;
 }) {
   const [theme, setTheme] = React.useState<Theme>(defaultTheme);
 
